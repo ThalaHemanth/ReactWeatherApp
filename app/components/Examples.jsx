@@ -9,7 +9,7 @@ var React = require('react');
 // });
 var Examples = (props) => {
   return (
-     <h3> Examples Component</h3>
+     <h3> Examples Its 20 C in Chittoor</h3>
       );
 };
 
