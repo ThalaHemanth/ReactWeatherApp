@@ -1,27 +1,44 @@
 var React = require('react');
 var {Link,IndexLink} = require('react-router');
 
-// var NavBar = React.createClass({
-//   render : function () {
-//     return (
-//       <div>
-//           <h2> This Navigation Bar</h2>
-//           <IndexLink activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to='/'>Get Weather</IndexLink>
-//           <Link activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to= '/about'>About</Link>
-//           <Link activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to = '/examples'>Examples</Link>
-//       </div>
-//     );
-//   }
-// });
 
-var NavBar = (props) => {
-  return (
-    <div>
-        <h2>  Navigation Bar</h2>
-        <IndexLink activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to='/'>Get Weather</IndexLink>
-        <Link activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to= '/about'>About</Link>
-        <Link activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to = '/examples'>Examples</Link>
-    </div>
-  );
-};
+
+var NavBar = React.createClass({
+
+    onSearch : function (e) {
+      e.preventDefault();
+      alert("On Process")
+    },
+  render : function () {
+    return (
+        <div className="top-bar">
+          <div className="top-bar-left">
+            <ul className="menu">
+              <li>
+                <IndexLink activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to='/'>Get Weather</IndexLink>
+              </li>
+              <li>
+                <Link activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to= '/about'>About</Link>
+              </li>
+              <li>
+                <Link activeClassName = "active" activeStyle = {{fontWeight: 'bold'}} to = '/examples'>Examples</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="top-bar-right">
+            <form onSubmit={this.onSearch}>
+              <ul className="menu">
+                <li>
+                  <input type = "search" placeholder = "Enter a Location"/>
+                </li>
+                <li>
+                  <input type = "submit" className="button" value="Get Weather"/>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+    );
+  }
+});
 module.exports = NavBar;
