@@ -16,7 +16,7 @@ var Weather = React.createClass({
   handleSearch : function (location) {
     // we use "that" instead of "this" because of some scope problems occurs inside function
     var that = this;
-  
+
     this.setState ({isLoading : true});
 
     OpenWeatherMap.getTemp(location).then(function (temp) {
@@ -35,13 +35,14 @@ var Weather = React.createClass({
     var {isLoading,location,temp} = this.state;
     function renderMessage() {
       if(isLoading) {
-        return <h3>Fetching..</h3>;
+        return <h3 className="text-center">Fetching..</h3>;
       } else if (temp && location) {
       return  <WeatherMessage location = {location} temp = {temp}/>;
       }
     }
     return (
         <div>
+          <h1 className="text-center">Get Weather</h1>
           <WeatherForm onSearch = {this.handleSearch}/>
           {renderMessage()}
         </div>
