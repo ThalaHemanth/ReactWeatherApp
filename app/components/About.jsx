@@ -1,5 +1,6 @@
 var React = require('react');
 
+
 // var About = React.createClass({
 //   render : function () {
 //     return (
@@ -10,7 +11,19 @@ var React = require('react');
 
 var About = (props) => {
   return (
-       <h3> Thala Hemanth's Weather App </h3>
+       <div className="text-center">
+         <h1>About</h1>
+         <p>This is my first weather app which is created using <a href="https://facebook.github.io/react">React</a> </p>
+         <h4>Contact us</h4>
+         <ul className="menu">
+           <li>
+             <a  href="https://facebook.com/yoursthala">Facebook</a>
+           </li>
+           <li>
+            <a href="https://twitter.com/viruhemanth">Twitter</a>
+           </li>
+          </ul>
+       </div>
       );
 };
 
