@@ -12,7 +12,7 @@ var React = require('react');
 var About = (props) => {
   return (
        <div className="text-center">
-         <h1>About</h1>
+         <h1 className="main-heading">About</h1>
          <p>This is my first weather app which is created using <a href="https://facebook.github.io/react">React</a> </p>
          <h4>Contact us</h4>
          <ul className="menu">
