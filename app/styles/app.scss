@@ -1,0 +1,15 @@
+$space : 50px;
+$title-color : #0894F1;
+
+.page-layout {
+  margin-top: 35px;
+  margin-bottom: $space;
+}
+
+.search-box {
+  box-shadow: none;
+}
+
+.main-heading {
+  color: $title-color
+}
